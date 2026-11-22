@@ -1,0 +1,401 @@
+/* =====================================================
+   SHEZINO — CLEAN WHITE NAVBAR WITH HERO OBSIDIAN PILL
+===================================================== */
+
+.sz-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e4edf8;
+  transition:
+    box-shadow 220ms var(--sz-ease),
+    border-color 220ms var(--sz-ease);
+}
+
+.sz-header.is-scrolled {
+  background: #ffffff;
+  border-bottom-color: #d6e3f5;
+  box-shadow: 0 10px 28px -10px rgba(1, 4, 13, 0.1);
+}
+
+.sz-header-inner {
+  width: min(var(--sz-container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.sz-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(14px, 2vw, 28px);
+  min-height: 74px;
+  transition: min-height 220ms var(--sz-ease);
+}
+
+.sz-header.is-scrolled .sz-navbar {
+  min-height: 66px;
+}
+
+.sz-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: transform 200ms var(--sz-ease);
+}
+
+.sz-brand-logo:hover {
+  transform: translateY(-1px);
+}
+
+.sz-brand-logo img {
+  display: block;
+  width: auto;
+  height: 38px;
+  object-fit: contain;
+}
+
+/* Crisp Solid White Pill Dock (No Glass) */
+.sz-nav-dock {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dce6f5;
+  box-shadow: 0 2px 10px rgba(1, 4, 13, 0.04);
+  min-width: 0;
+}
+
+.sz-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: #1e2f4f;
+  font-family: var(--sz-font-display);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 180ms var(--sz-ease);
+}
+
+.sz-nav-link.is-highlighted,
+.sz-nav-link.is-active.is-highlighted {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.sz-nav-link.is-active:not(.is-highlighted) {
+  color: #01040d;
+  font-weight: 700;
+}
+
+.sz-nav-link-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fluid Spring-Animated Hero Obsidian Capsule */
+.sz-nav-gloss-pill {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 999px;
+  background: #071538;
+  border: 1px solid rgba(126, 232, 255, 0.28);
+  box-shadow: 0 4px 14px rgba(1, 4, 13, 0.2);
+}
+
+.sz-nav-gloss-pill.is-current {
+  background: #01040d;
+  border: 1px solid rgba(86, 218, 255, 0.35);
+  box-shadow: 0 6px 16px rgba(1, 4, 13, 0.24);
+}
+
+.sz-nav-link:focus-visible,
+.sz-contact-btn:focus-visible,
+.sz-mobile-toggle:focus-visible,
+.sz-mobile-link:focus-visible,
+.sz-mobile-cta:focus-visible {
+  outline: 2px solid var(--sz-blue);
+  outline-offset: 2px;
+}
+
+.sz-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Hero Obsidian CTA Button */
+.sz-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 22px;
+  border: 1px solid rgba(86, 218, 255, 0.28);
+  border-radius: 999px;
+  color: #ffffff;
+  background: #01040d;
+  box-shadow: 0 6px 18px rgba(1, 4, 13, 0.2);
+  font-family: var(--sz-font-display);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    background 200ms var(--sz-ease),
+    border-color 200ms var(--sz-ease),
+    transform 200ms var(--sz-ease),
+    box-shadow 200ms var(--sz-ease);
+}
+
+.sz-contact-btn:hover {
+  background: #071538;
+  border-color: #56daff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(1, 4, 13, 0.26);
+}
+
+.sz-contact-arrow {
+  color: #56daff;
+  transition: transform 200ms var(--sz-ease);
+}
+
+.sz-contact-btn:hover .sz-contact-arrow {
+  transform: translate(2px, -2px);
+}
+
+.sz-mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #dce6f5;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #01040d;
+  transition: border-color 180ms var(--sz-ease);
+}
+
+.sz-mobile-toggle:hover {
+  border-color: #01040d;
+}
+
+.sz-mobile-drawer {
+  display: none;
+}
+
+/* Main page container */
+.sz-page-content {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.sz-container {
+  width: min(var(--sz-container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.sz-eyebrow {
+  display: block;
+  margin: 0 0 12px;
+  color: var(--sz-blue);
+  font-family: var(--sz-font-display);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.sz-gradient-text {
+  background: linear-gradient(105deg, #01219b 0%, #015eed 50%, #029dfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Compact Essential Cookie Notice */
+.sz-cookie-notice {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 95;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 460px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(5, 12, 31, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(140, 184, 255, 0.24);
+  box-shadow: 0 16px 36px rgba(2, 6, 18, 0.32);
+  color: #dbe7fc;
+}
+
+.sz-cookie-notice p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.sz-cookie-notice a {
+  color: #56daff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sz-cookie-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 999px;
+  background: #015eed;
+  color: #ffffff;
+  font-family: var(--sz-font-display);
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background 150ms var(--sz-ease);
+}
+
+.sz-cookie-btn:hover {
+  background: #0284f5;
+}
+
+@media (max-width: 1140px) {
+  .sz-nav-link {
+    padding: 8px 12px;
+    font-size: 13.5px;
+  }
+}
+
+/* Responsive Navigation */
+@media (max-width: 1024px) {
+  .sz-nav-dock,
+  .sz-contact-btn {
+    display: none;
+  }
+
+  .sz-mobile-toggle {
+    display: inline-flex;
+  }
+
+  .sz-mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-height: calc(100svh - 82px);
+    overflow-y: auto;
+    margin-bottom: 14px;
+    padding: 14px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #dce6f5;
+    box-shadow: 0 18px 40px rgba(1, 4, 13, 0.12);
+  }
+
+  .sz-mobile-links {
+    display: grid;
+    gap: 5px;
+  }
+
+  .sz-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 46px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    color: #01040d;
+    font-family: var(--sz-font-display);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      background 160ms var(--sz-ease),
+      color 160ms var(--sz-ease);
+  }
+
+  .sz-mobile-link.active,
+  .sz-mobile-link:hover {
+    background: #01040d;
+    color: #ffffff;
+  }
+
+  .sz-mobile-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 1px solid rgba(86, 218, 255, 0.3);
+    border-radius: 999px;
+    color: #ffffff;
+    background: #01040d;
+    font-family: var(--sz-font-display);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .sz-mobile-cta:hover {
+    background: #071538;
+  }
+}
+
+@media (max-width: 640px) {
+  .sz-header-inner,
+  .sz-container {
+    width: calc(100% - 32px);
+  }
+
+  .sz-navbar {
+    min-height: 64px;
+  }
+
+  .sz-brand-logo img {
+    height: 30px;
+  }
+
+  .sz-cookie-notice {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 12px;
+    max-width: none;
+    padding: 10px 14px;
+  }
+
+  .sz-cookie-notice p {
+    font-size: 12px;
+  }
+}

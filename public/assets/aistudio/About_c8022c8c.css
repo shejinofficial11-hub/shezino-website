@@ -1,0 +1,643 @@
+
+.sz-about {
+  width: 100%;
+  overflow: hidden;
+  color: #07183e;
+  background: #fff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.sz-about * {
+  box-sizing: border-box;
+}
+
+.sz-about img {
+  display: block;
+}
+
+.sz-about .sz-eyebrow {
+  display: block;
+  color: #3162c2;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  line-height: 1.5;
+}
+
+/* HERO */
+
+.sz-about-hero {
+  position: relative;
+  padding-top: 38px;
+  background: #f4f7ff;
+}
+
+.sz-about-copy {
+  position: relative;
+  z-index: 2;
+  padding: 0 8% 18px;
+}
+
+.sz-about-copy h1 {
+  margin: 8px 0 12px;
+  color: #07183e;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.08;
+}
+
+.sz-about-copy h1 span {
+  background: linear-gradient(100deg, #0878fa, #7138e8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sz-about-copy p {
+  max-width: 470px;
+  margin: 0;
+  color: #40516e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.sz-about-mantra {
+  position: absolute;
+  z-index: 3;
+  top: 48px;
+  right: 9%;
+  padding-left: 15px;
+  border-left: 1px solid #91a1bd;
+  color: #20304d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* OFFICE PHOTO */
+
+.sz-office {
+  position: relative;
+  width: 100%;
+  height: clamp(220px, 26vw, 400px);
+  overflow: hidden;
+  margin-top: -5px;
+  background: #dce8fa;
+}
+
+.sz-office img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sz-office-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #f4f7ff 0%,
+    rgba(244, 247, 255, 0.94) 5%,
+    rgba(244, 247, 255, 0.72) 17%,
+    rgba(244, 247, 255, 0.24) 32%,
+    rgba(244, 247, 255, 0.02) 46%,
+    transparent 56%
+  );
+}
+
+/* THREE COLUMNS */
+
+.sz-principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 25px 6% 30px;
+  background: #fff;
+}
+
+.sz-principle {
+  min-width: 0;
+  padding: 0 22px;
+  border-right: 1px solid #dce3ee;
+}
+
+.sz-principle:first-child {
+  padding-left: 10px;
+}
+
+.sz-principle:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.sz-principle h2 {
+  margin: 9px 0 7px;
+  color: #0c1d43;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.sz-principle p {
+  max-width: 290px;
+  margin: 0;
+  color: #53627c;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+/* STORY BANNER */
+
+.sz-story {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-height: 205px;
+  overflow: hidden;
+  padding: 28px 6%;
+  color: #fff;
+  background: #061735;
+}
+
+.sz-story-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sz-story-fade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 19, 49, 0.94) 0%,
+    rgba(3, 19, 49, 0.78) 27%,
+    rgba(3, 19, 49, 0.3) 58%,
+    rgba(3, 19, 49, 0.02) 100%
+  );
+}
+
+.sz-story-copy {
+  position: relative;
+  z-index: 1;
+  width: 42%;
+  max-width: 310px;
+}
+
+.sz-story-copy h2 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sz-story-copy p {
+  margin: 0;
+  color: #e0e7f7;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.sz-story-copy a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+  color: #fff;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.sz-story-location {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.sz-story-location span:last-child {
+  color: #d3dffc;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .sz-about-hero {
+    padding-top: 30px;
+  }
+
+  .sz-about-copy {
+    padding: 0 6% 18px;
+  }
+
+  .sz-about-copy h1 {
+    font-size: clamp(35px, 5.5vw, 48px);
+  }
+
+  .sz-about-copy p {
+    max-width: 75%;
+    font-size: 11px;
+  }
+
+  .sz-about-mantra {
+    top: 43px;
+    right: 5%;
+    font-size: 11px;
+  }
+
+  .sz-office {
+    height: clamp(180px, 32vw, 260px);
+  }
+
+  .sz-principles {
+    padding: 20px 5%;
+  }
+
+  .sz-principle {
+    padding: 0 12px;
+  }
+
+  .sz-principle h2 {
+    font-size: 12px;
+  }
+
+  .sz-principle p {
+    font-size: 9px;
+  }
+
+  .sz-story {
+    min-height: 150px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+  .sz-about-hero {
+    padding-top: 26px;
+  }
+
+  .sz-about-copy {
+    padding: 0 6% 16px;
+  }
+
+  .sz-about-copy h1 {
+    font-size: 35px;
+    letter-spacing: -1.5px;
+  }
+
+  .sz-about-copy p {
+    max-width: 74%;
+    font-size: 9px;
+    line-height: 1.7;
+  }
+
+  .sz-about-mantra {
+    top: 40px;
+    right: 5%;
+    padding-left: 8px;
+    font-size: 9px;
+  }
+
+  .sz-office {
+    height: 145px;
+  }
+
+  .sz-principles {
+    padding: 17px 5%;
+  }
+
+  .sz-principle {
+    padding: 0 8px;
+  }
+
+  .sz-principle:first-child {
+    padding-left: 0;
+  }
+
+  .sz-principle h2 {
+    font-size: 9px;
+  }
+
+  .sz-principle p {
+    font-size: 7px;
+    line-height: 1.65;
+  }
+
+  .sz-about .sz-eyebrow {
+    font-size: 6px;
+    letter-spacing: 1.1px;
+  }
+
+  .sz-story {
+    min-height: 112px;
+    padding: 15px 6%;
+    gap: 10px;
+  }
+
+  .sz-story-copy {
+    width: 48%;
+  }
+
+  .sz-story-copy h2 {
+    font-size: 12px;
+  }
+
+  .sz-story-copy p,
+  .sz-story-copy a {
+    font-size: 7px;
+  }
+
+  .sz-story-location {
+    font-size: 9px;
+  }
+}
+
+/* FIX 1: Show the complete office image without cropping */
+.sz-office {
+  width: 100%;
+  height: auto !important;
+  overflow: hidden;
+  margin-top: 0;
+  line-height: 0;
+  background: #f4f7ff;
+}
+
+.sz-office img {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  object-fit: contain !important;
+  object-position: center;
+}
+
+/* Keep the reference fade at the top of the office image */
+.sz-office-fade {
+  background: linear-gradient(
+    to bottom,
+    #f4f7ff 0%,
+    rgba(244, 247, 255, 0.9) 5%,
+    rgba(244, 247, 255, 0.5) 17%,
+    rgba(244, 247, 255, 0.1) 30%,
+    transparent 43%
+  );
+}
+
+/* FIX 2: Restore the dark-to-light story banner */
+.sz-story {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 205px;
+  overflow: hidden;
+  padding: 28px 6%;
+  background: #061735;
+}
+
+.sz-story-image {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sz-story-fade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 19, 49, 0.94) 0%,
+    rgba(3, 19, 49, 0.7) 28%,
+    rgba(3, 19, 49, 0.15) 65%,
+    rgba(3, 19, 49, 0.02) 100%
+  );
+  pointer-events: none;
+}
+
+/* Story text on the left */
+.sz-story-copy {
+  position: relative;
+  z-index: 2;
+  width: 42%;
+  max-width: 310px;
+  color: #ffffff;
+}
+
+.sz-story-copy h2,
+.sz-story-copy p,
+.sz-story-copy a {
+  color: #ffffff;
+}
+
+/* FIX 3: Location text should be navy on the light side */
+.sz-story-location {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #10244b;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.sz-story-location span:last-child {
+  color: #263e72;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .sz-story {
+    min-height: 145px;
+    padding: 16px 6%;
+    gap: 10px;
+  }
+
+  .sz-story-location {
+    font-size: 9px;
+  }
+}
+
+/* Natural, compact About hero */
+.sz-about-hero {
+  position: relative;
+  padding-top: 30px;
+  background: #f5f8ff;
+}
+
+.sz-about-copy {
+  position: relative;
+  z-index: 2;
+  padding: 0 7.8% 8px;
+}
+
+.sz-about-copy h1 {
+  margin: 7px 0 10px;
+  font-size: clamp(38px, 4vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.sz-about-copy p {
+  max-width: 440px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #394b69;
+}
+
+.sz-about-mantra {
+  top: 48px;
+  right: 8%;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Reduce the artificial white fade */
+.sz-office {
+  height: clamp(230px, 27vw, 340px);
+  margin-top: -2px;
+  overflow: hidden;
+  line-height: normal;
+}
+
+.sz-office img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.sz-office-fade {
+  background: linear-gradient(
+    to bottom,
+    #f5f8ff 0%,
+    rgba(245, 248, 255, 0.82) 7%,
+    rgba(245, 248, 255, 0.38) 18%,
+    rgba(245, 248, 255, 0.08) 29%,
+    transparent 40%
+  );
+}
+
+/* Tighter, more editorial section spacing */
+.sz-principles {
+  padding: 22px 6% 25px;
+}
+
+.sz-principle h2 {
+  margin: 7px 0 6px;
+  font-size: 13px;
+}
+
+.sz-principle p {
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .sz-about-hero {
+    padding-top: 24px;
+  }
+
+  .sz-about-copy {
+    padding: 0 6% 12px;
+  }
+
+  .sz-about-copy h1 {
+    font-size: 34px;
+    letter-spacing: -1.2px;
+  }
+
+  .sz-about-copy p {
+    max-width: 76%;
+    font-size: 9px;
+  }
+
+  .sz-office {
+    height: 180px;
+  }
+}
+
+/* FINAL GAP FIX — keep this at the VERY END of About.css */
+
+.sz-about-hero {
+  padding-top: 30px !important;
+  padding-bottom: 0 !important;
+}
+
+.sz-about-copy {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.sz-about-copy h1 {
+  margin-bottom: 10px !important;
+}
+
+.sz-about-copy p {
+  margin-bottom: 0 !important;
+}
+
+/* Remove the large empty space above the office image */
+.sz-office {
+  position: relative !important;
+  height: 340px !important;
+  margin-top: -2px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  line-height: 0 !important;
+}
+
+.sz-office img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 45% !important;
+}
+
+/* Fade only at the top edge of the photo */
+.sz-office-fade {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(
+    to bottom,
+    #f5f8ff 0%,
+    rgba(245, 248, 255, 0.75) 10%,
+    rgba(245, 248, 255, 0.25) 24%,
+    transparent 42%
+  ) !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 520px) {
+  .sz-office {
+    height: 190px !important;
+  }
+}

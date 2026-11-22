@@ -1,0 +1,119 @@
+:root {
+  --sz-font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --sz-font-body: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  /* SHEZINO LOGO PALETTE — Obsidian Chrome, Royal Sapphire, Electric Cobalt & Ice Cyan */
+  --sz-navy: #050c1f;
+  --sz-navy-soft: #0b1f58;
+  --sz-blue: #015eed;
+  --sz-blue-deep: #01219b;
+  --sz-purple: #029dfa;
+  --sz-cyan: #07dffc;
+  --sz-text: #2a3a55;
+  --sz-muted: #526584;
+  --sz-surface: #ffffff;
+  --sz-border: #e4edf8;
+  --sz-white: #ffffff;
+
+  --sz-container: 1240px;
+  --sz-radius-sm: 10px;
+  --sz-radius-md: 16px;
+  --sz-radius-lg: 22px;
+  --sz-shadow: 0 12px 32px rgba(5, 12, 31, 0.08);
+  --sz-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: clip;
+  scroll-padding-top: 88px;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--sz-white);
+  color: var(--sz-navy);
+  font-family: var(--sz-font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-family: var(--sz-font-display);
+  color: var(--sz-navy);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+p {
+  margin-top: 0;
+  color: var(--sz-text);
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--sz-blue);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(21, 94, 239, 0.45);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

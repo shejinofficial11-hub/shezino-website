@@ -1,0 +1,468 @@
+
+/* SHEZINO — OPPORTUNITIES PAGE */
+
+.opp-page {
+  --opp-navy: #0a1b43;
+  --opp-blue: #2167ff;
+  --opp-purple: #5138f5;
+
+  width: 100%;
+  color: var(--opp-navy);
+  background: #fff;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HERO */
+
+.opp-hero {
+  position: relative;
+  min-height: 560px;
+  padding: 68px max(7.5%, calc((100% - 1440px) / 2)) 0;
+  background:
+    radial-gradient(
+      ellipse at 90% 12%,
+      rgba(199, 212, 255, 0.72),
+      transparent 44%
+    ),
+    linear-gradient(110deg, #fff 8%, #f4f7ff 72%, #eaf0ff);
+}
+
+.opp-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 590px;
+  padding-bottom: 35px;
+}
+
+.opp-eyebrow {
+  display: block;
+  margin-bottom: 17px;
+  color: var(--opp-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.opp-hero-content h1 {
+  margin: 0 0 20px;
+  color: var(--opp-navy);
+  font-size: clamp(38px, 4.2vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.opp-hero-content h1 span {
+  color: var(--opp-purple);
+}
+
+.opp-hero-content > p {
+  max-width: 520px;
+  margin: 0 0 25px;
+  color: #455a79;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.opp-primary-btn,
+.opp-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 0 23px;
+  border-radius: 30px;
+  background: linear-gradient(110deg, var(--opp-blue), var(--opp-purple));
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opp-primary-btn:hover,
+.opp-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(44, 76, 210, 0.2);
+}
+
+.opp-handwritten {
+  position: absolute;
+  z-index: 3;
+  top: 125px;
+  right: 10%;
+  color: #52658c;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.6;
+  transform: rotate(-7deg);
+}
+
+.opp-handwritten span {
+  display: block;
+  width: 38px;
+  height: 2px;
+  margin-top: 12px;
+  background: var(--opp-blue);
+}
+
+/* HERO IMAGE
+   Put your image at: public/opportunities-hero.jpg
+*/
+
+.opp-hero-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 0;
+  overflow: hidden;
+  border-radius: 14px 14px 0 0;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(245, 248, 255, 0.25),
+      transparent 55%
+    ),
+    url("/opportunities-hero.png");
+
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+}
+
+.opp-image-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04),
+    transparent 55%
+  );
+}
+
+/* FOUR OPPORTUNITY ITEMS */
+
+.opp-options {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  padding: 28px max(7.5%, calc((100% - 1440px) / 2));
+  background: #fff;
+}
+
+.opp-card {
+  min-width: 0;
+  padding: 12px 25px 18px;
+  border-right: 1px solid #e1e8f6;
+  animation: oppFadeUp 0.65s ease both;
+  animation-delay: var(--opp-delay, 0ms);
+}
+
+.opp-card:first-child {
+  padding-left: 8px;
+}
+
+.opp-card:last-child {
+  border-right: 0;
+}
+
+.opp-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #edf2ff;
+  color: #2864ff;
+  border-radius: 20px;
+}
+
+.opp-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: currentColor;
+  stroke-width: 1.9;
+}
+
+.opp-card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 750;
+}
+
+.opp-card p {
+  max-width: 250px;
+  min-height: 58px;
+  margin: 0 0 12px;
+  color: #53647e;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.opp-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--opp-blue);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.opp-card-link span {
+  transition: transform 0.2s ease;
+}
+
+.opp-card-link:hover span {
+  transform: translateX(4px);
+}
+
+/* BOTTOM CTA */
+
+.opp-bottom-cta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0 2.5% 26px;
+  padding: 34px 5%;
+  overflow: hidden;
+  border-radius: 0 0 14px 14px;
+  color: #fff;
+  background:
+    radial-gradient(
+      ellipse at 90% 100%,
+      rgba(80, 53, 245, 0.75),
+      transparent 45%
+    ),
+    linear-gradient(115deg, #071632, #10275b);
+}
+
+.opp-cta-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.opp-cta-copy h2 {
+  margin: 0 0 10px;
+  font-size: clamp(20px, 2vw, 27px);
+  line-height: 1.45;
+  font-weight: 750;
+}
+
+.opp-cta-copy p {
+  margin: 0;
+  color: #d0daf0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.opp-cta-btn {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  color: var(--opp-navy);
+  background: #fff;
+}
+
+/* ANIMATION */
+
+@keyframes oppFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .opp-hero {
+    min-height: auto;
+    padding: 52px 5% 0;
+  }
+
+  .opp-hero-content {
+    max-width: 65%;
+  }
+
+  .opp-handwritten {
+    right: 6%;
+    top: 100px;
+    font-size: 16px;
+  }
+
+  .opp-hero-image {
+    height: 260px;
+  }
+
+  .opp-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 22px 5%;
+  }
+
+  .opp-card {
+    padding: 22px;
+    border-bottom: 1px solid #e1e8f6;
+  }
+
+  .opp-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .opp-card:nth-child(n + 3) {
+    border-bottom: 0;
+  }
+
+  .opp-card:first-child {
+    padding-left: 22px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .opp-hero {
+    padding: 38px 22px 0;
+  }
+
+  .opp-hero-content {
+    max-width: 100%;
+    padding-bottom: 28px;
+  }
+
+  .opp-eyebrow {
+    margin-bottom: 12px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .opp-hero-content h1 {
+    font-size: clamp(34px, 9vw, 44px);
+    letter-spacing: -1.3px;
+  }
+
+  .opp-hero-content > p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .opp-handwritten {
+    display: none;
+  }
+
+  .opp-hero-image {
+    height: 210px;
+    margin-inline: -22px;
+    width: calc(100% + 44px);
+    border-radius: 0;
+    background-position: center;
+  }
+
+  .opp-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 15px 12px;
+  }
+
+  .opp-card,
+  .opp-card:first-child {
+    padding: 18px 13px;
+  }
+
+  .opp-card h2 {
+    font-size: 16px;
+  }
+
+  .opp-card p {
+    min-height: 0;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .opp-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .opp-card:nth-child(3) {
+    border-bottom: 0;
+    border-right: 1px solid #e1e8f6;
+  }
+
+  .opp-card:nth-child(4) {
+    border-bottom: 0;
+  }
+
+  .opp-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    margin: 0 12px 18px;
+    padding: 27px 22px;
+  }
+
+  .opp-cta-copy h2 {
+    font-size: 21px;
+  }
+
+  .opp-cta-copy p {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opp-card {
+    animation: none;
+  }
+
+  .opp-primary-btn,
+  .opp-cta-btn {
+    transition: none;
+  }
+}
+/* Opportunities hero — full edge-to-edge width */
+.opp-hero-image {
+  width: 100vw !important;
+  max-width: none !important;
+  height: 360px;
+
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  margin-top: 0;
+
+  border-radius: 0 !important;
+  overflow: hidden;
+
+  background-image: url("/opportunities-hero.png");
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+}
+
+/* Prevent horizontal scrollbar */
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .opp-hero-image {
+    height: 240px;
+    background-position: 42% center;
+  }
+}

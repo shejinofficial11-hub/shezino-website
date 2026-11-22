@@ -1,0 +1,846 @@
+.sz-opp {
+  width: 100%;
+  background: var(--sz-white);
+}
+
+.sz-opp .sz-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-family: var(--sz-font-display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #015eed;
+}
+
+/* 01. IMMERSIVE FULL-VIEWPORT OBSIDIAN HERO */
+.sz-opp-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - 76px);
+  padding: clamp(36px, 4.5vw, 60px) 0;
+  background: #01040d;
+  color: #ffffff;
+}
+
+.sz-opp-hero-glow {
+  position: absolute;
+  top: -80px;
+  right: 4%;
+  z-index: -1;
+  width: min(740px, 56vw);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(1, 94, 237, 0.24) 0%,
+    rgba(1, 33, 155, 0.12) 48%,
+    transparent 74%
+  );
+  pointer-events: none;
+}
+
+.sz-opp-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: clamp(24px, 3.2vw, 44px);
+  width: min(1380px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.sz-opp .sz-opp-eyebrow {
+  color: #56daff;
+}
+
+.sz-opp-hero-copy h1 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: var(--sz-font-display);
+  font-size: clamp(2.35rem, 3.65vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.sz-opp-highlight {
+  background: linear-gradient(100deg, #7ee8ff 0%, #38bdf8 48%, #029dfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sz-opp-hero-lead {
+  max-width: 54ch;
+  margin: 0 0 28px;
+  color: #cddcf5;
+  font-family: var(--sz-font-body);
+  font-size: 16.5px;
+  line-height: 1.72;
+}
+
+.sz-opp-hero-index {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(140, 184, 255, 0.18);
+}
+
+.sz-opp-hero-index span {
+  display: block;
+  margin-bottom: 4px;
+  color: #56daff;
+  font-family: var(--sz-font-display);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sz-opp-hero-index strong {
+  display: block;
+  color: #f0f6ff;
+  font-family: var(--sz-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* HERO RIGHT: ORBITAL CONSTELLATION CONTAINER */
+.sz-opp-hero-stage {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.sz-opp-stage-glow {
+  position: absolute;
+  inset: 22% 22% 20%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(2, 157, 250, 0.14) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/* SHARED BANDS */
+.sz-opp-white-band {
+  width: 100%;
+  padding: 84px 0 92px;
+  background: #ffffff;
+  color: var(--sz-navy);
+}
+
+.sz-opp-dark-band {
+  width: 100%;
+  padding: 84px 0 92px;
+  scroll-margin-top: 84px;
+  background: #050a18;
+  color: #ffffff;
+}
+
+/* UNIFIED SECTION HEADING SCALE */
+.sz-opp-why-copy h2,
+.sz-opp-tracks-intro h2,
+.sz-opp-section-head h2,
+.sz-opp-closing-copy h2 {
+  margin: 0 0 16px;
+  font-family: var(--sz-font-display);
+  font-size: clamp(1.85rem, 2.85vw, 2.45rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.13;
+  text-wrap: balance;
+}
+
+/* 02. ENGINEERING CULTURE — EDITORIAL SPLIT */
+.sz-opp-why-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: start;
+  gap: 36px 64px;
+}
+
+.sz-opp-why-copy h2 {
+  color: var(--sz-navy);
+}
+
+.sz-opp-why-copy p {
+  max-width: 52ch;
+  margin: 0;
+  color: var(--sz-text);
+  font-family: var(--sz-font-body);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.sz-opp-pillars-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dfe8f7;
+}
+
+.sz-opp-pillar-row {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid #dfe8f7;
+}
+
+.sz-opp-pillar-num {
+  color: #015eed;
+  font-family: var(--sz-font-display);
+  font-size: 15.5px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  padding-top: 2px;
+}
+
+.sz-opp-pillar-row h3 {
+  margin: 0 0 5px;
+  color: var(--sz-navy);
+  font-family: var(--sz-font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sz-opp-pillar-row p {
+  margin: 0;
+  color: var(--sz-text);
+  font-family: var(--sz-font-body);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* 03. OPEN DISCIPLINES — DARK OBSIDIAN STICKY SPLIT */
+.sz-opp-tracks-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: 36px 56px;
+}
+
+.sz-opp-tracks-intro {
+  position: sticky;
+  top: 104px;
+}
+
+.sz-opp-tracks-intro .sz-eyebrow {
+  color: #56daff;
+}
+
+.sz-opp-tracks-intro h2 {
+  color: #ffffff;
+}
+
+.sz-opp-tracks-intro p {
+  max-width: 44ch;
+  margin: 0;
+  color: #b7c8e4;
+  font-family: var(--sz-font-body);
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+.sz-opp-tracks-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.sz-opp-track-card {
+  padding: 26px 26px 22px;
+  border-radius: 18px;
+  background: #0b1326;
+  border: 1px solid rgba(140, 184, 255, 0.16);
+  transition: border-color 180ms var(--sz-ease);
+}
+
+.sz-opp-track-card:hover {
+  border-color: rgba(86, 218, 255, 0.42);
+}
+
+.sz-opp-track-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.sz-opp-track-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sz-opp-track-num {
+  color: #56daff;
+  font-family: var(--sz-font-display);
+  font-size: 14px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.sz-opp-track-icon {
+  color: #56daff;
+  flex-shrink: 0;
+}
+
+.sz-opp-track-card h3 {
+  margin: 0;
+  color: #ffffff;
+  font-family: var(--sz-font-display);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.sz-opp-track-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #7ee8ff;
+  font-family: var(--sz-font-display);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms var(--sz-ease);
+}
+
+.sz-opp-track-link:hover {
+  color: #ffffff;
+}
+
+.sz-opp-track-desc {
+  margin: 0 0 16px;
+  color: #c2d3ee;
+  font-family: var(--sz-font-body);
+  font-size: 14.8px;
+  line-height: 1.62;
+}
+
+.sz-opp-areas-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(140, 184, 255, 0.14);
+}
+
+.sz-opp-area-item {
+  color: #e6f0ff;
+  font-family: var(--sz-font-body);
+  font-size: 13px;
+  font-weight: 600;
+  padding-right: 14px;
+  border-right: 1px solid rgba(140, 184, 255, 0.24);
+  line-height: 1.2;
+}
+
+.sz-opp-area-item:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+/* 04. PATHWAYS & SHARED STANDARDS — PURE WHITE SPLIT */
+.sz-opp-connect-value-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  align-items: start;
+  gap: 36px 48px;
+}
+
+.sz-opp-section-head {
+  margin-bottom: 28px;
+}
+
+.sz-opp-section-head h2 {
+  margin-bottom: 0;
+  color: var(--sz-navy);
+}
+
+.sz-opp-journeys-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.sz-opp-journey-card {
+  padding: 24px 22px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #dbe7fa;
+  transition:
+    transform 180ms var(--sz-ease),
+    border-color 180ms var(--sz-ease);
+}
+
+.sz-opp-journey-card:hover {
+  transform: translateY(-2px);
+  border-color: #9ec0f8;
+}
+
+.sz-opp-journey-num {
+  display: block;
+  margin-bottom: 10px;
+  color: #015eed;
+  font-family: var(--sz-font-display);
+  font-size: 14px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.sz-opp-journey-card h3 {
+  margin: 0 0 8px;
+  color: var(--sz-navy);
+  font-family: var(--sz-font-display);
+  font-size: 17.5px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sz-opp-journey-card p {
+  margin: 0;
+  color: var(--sz-text);
+  font-family: var(--sz-font-body);
+  font-size: 14.5px;
+  line-height: 1.62;
+}
+
+/* SHARED STANDARDS CARD */
+.sz-opp-expectations-card {
+  padding: 32px 28px;
+  border-radius: 18px;
+  background: #f8fbff;
+  border: 1px solid #d5e4fc;
+}
+
+.sz-opp-expectations-card h2 {
+  margin: 0 0 8px;
+  color: var(--sz-navy);
+  font-family: var(--sz-font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.sz-opp-exp-intro {
+  margin: 0 0 20px;
+  color: var(--sz-text);
+  font-family: var(--sz-font-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.sz-opp-exp-list {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.sz-opp-exp-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--sz-navy);
+  font-family: var(--sz-font-body);
+  font-size: 14.8px;
+  font-weight: 600;
+}
+
+.sz-opp-exp-list svg {
+  color: #015eed;
+  flex-shrink: 0;
+}
+
+.sz-opp-exp-principle {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid #dbe7fa;
+  color: #015eed;
+  font-family: var(--sz-font-display);
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.sz-opp-white-divider {
+  width: 100%;
+  height: 1px;
+  margin: 64px 0 56px;
+  background: #dfe8f7;
+}
+
+/* CATEGORIZED PROGRAMS & INITIATIVES DIRECTORY */
+.sz-opp-directory {
+  display: grid;
+  gap: 24px;
+}
+
+.sz-opp-directory-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: end;
+  gap: 20px 48px;
+}
+
+.sz-opp-directory-head h2 {
+  margin: 0;
+  color: var(--sz-navy);
+  font-family: var(--sz-font-display);
+  font-size: clamp(1.85rem, 2.85vw, 2.45rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.13;
+  text-wrap: balance;
+}
+
+.sz-opp-directory-head p {
+  margin: 0;
+  color: var(--sz-text);
+  font-family: var(--sz-font-body);
+  font-size: 15.5px;
+  line-height: 1.68;
+}
+
+.sz-opp-cat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sz-opp-cat-tab {
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #d5e4fc;
+  background: #f5f9ff;
+  color: #243659;
+  font-family: var(--sz-font-display);
+  font-size: 13.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 160ms var(--sz-ease),
+    border-color 160ms var(--sz-ease),
+    color 160ms var(--sz-ease);
+}
+
+.sz-opp-cat-tab:hover {
+  border-color: #015eed;
+  color: #015eed;
+}
+
+.sz-opp-cat-tab.is-active {
+  background: #015eed;
+  border-color: #015eed;
+  color: #ffffff;
+}
+
+.sz-opp-cat-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.sz-opp-cat-subheading {
+  margin: 0;
+  color: #015eed;
+  font-family: var(--sz-font-display);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sz-opp-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.sz-opp-program-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px 22px 20px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #dbe7fa;
+  transition:
+    transform 180ms var(--sz-ease),
+    border-color 180ms var(--sz-ease);
+}
+
+.sz-opp-program-card:hover {
+  transform: translateY(-2px);
+  border-color: #9ec0f8;
+}
+
+.sz-opp-program-card h3 {
+  margin: 0;
+  color: var(--sz-navy);
+  font-family: var(--sz-font-display);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sz-opp-program-card p {
+  margin: 0;
+  color: var(--sz-text);
+  font-family: var(--sz-font-body);
+  font-size: 14.3px;
+  line-height: 1.6;
+}
+
+.sz-opp-program-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: #015eed;
+  font-family: var(--sz-font-display);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 160ms var(--sz-ease);
+}
+
+.sz-opp-program-link:hover {
+  color: #01219b;
+}
+
+/* 05. OBSIDIAN CLOSING INVITATION SPLIT */
+.sz-opp-closing-band {
+  width: 100%;
+  padding: 80px 0 88px;
+  background: #01040d;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(140, 184, 255, 0.14);
+}
+
+.sz-opp-closing-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  align-items: center;
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.sz-opp-closing-copy h2 {
+  color: #ffffff;
+}
+
+.sz-opp-closing-copy p {
+  max-width: 54ch;
+  margin: 0 0 18px;
+  color: #cddcf5;
+  font-family: var(--sz-font-body);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.sz-opp-closing-principle {
+  display: block;
+  padding-top: 14px;
+  margin-bottom: 26px;
+  border-top: 1px solid rgba(140, 184, 255, 0.18);
+  color: #7ee8ff;
+  font-family: var(--sz-font-display);
+  font-size: 14.5px;
+  font-weight: 700;
+}
+
+.sz-opp-closing-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.sz-opp-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #015eed 0%, #029dfa 100%);
+  border: 1px solid rgba(126, 232, 255, 0.42);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 12px 28px rgba(1, 94, 237, 0.34);
+  font-family: var(--sz-font-display);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform 180ms var(--sz-ease),
+    box-shadow 180ms var(--sz-ease);
+}
+
+.sz-opp-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.34),
+    0 16px 34px rgba(2, 157, 250, 0.44);
+}
+
+.sz-opp-closing-visual-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.sz-opp-closing-aura {
+  position: absolute;
+  inset: 22% 24% 18%;
+  z-index: 2;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(2, 157, 250, 0.22) 0%,
+    rgba(1, 94, 237, 0.08) 48%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.sz-opp-closing-frame {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  -webkit-mask-image:
+    radial-gradient(
+      ellipse 54% 52% at 50% 48%,
+      #000000 70%,
+      rgba(0, 0, 0, 0.58) 85%,
+      transparent 99%
+    ),
+    linear-gradient(to top, transparent 0%, #000000 16%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    radial-gradient(
+      ellipse 54% 52% at 50% 48%,
+      #000000 70%,
+      rgba(0, 0, 0, 0.58) 85%,
+      transparent 99%
+    ),
+    linear-gradient(to top, transparent 0%, #000000 16%);
+  mask-composite: intersect;
+}
+
+.sz-opp-closing-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+}
+
+.sz-opp-closing-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(140, 184, 255, 0.2);
+  background: radial-gradient(circle at 50% 45%, rgba(1, 94, 237, 0.22), #050a18);
+  color: #7ee8ff;
+  font-family: var(--sz-font-display);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px) {
+  .sz-opp-hero {
+    min-height: auto;
+    padding: 48px 0;
+  }
+
+  .sz-opp-hero-inner,
+  .sz-opp-why-grid,
+  .sz-opp-tracks-layout,
+  .sz-opp-connect-value-grid,
+  .sz-opp-directory-head,
+  .sz-opp-closing-split {
+    grid-template-columns: 1fr;
+  }
+
+  .sz-opp-tracks-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .sz-opp-hero {
+    overflow-x: clip;
+    overflow-y: visible;
+    padding: 34px 0 42px;
+  }
+
+  .sz-opp-white-band,
+  .sz-opp-dark-band,
+  .sz-opp-closing-band {
+    padding: 48px 0;
+  }
+
+  .sz-opp-hero-inner {
+    width: calc(100% - 32px);
+  }
+
+  .sz-opp-hero-index,
+  .sz-opp-journeys-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sz-opp-pillar-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .sz-opp-track-card,
+  .sz-opp-expectations-card {
+    padding: 20px;
+  }
+
+  .sz-opp-cat-tab {
+    flex: 1 1 calc(50% - 6px);
+    padding: 9px 12px;
+    font-size: 12.5px;
+    text-align: center;
+  }
+
+  .sz-opp-primary-btn {
+    padding: 12px 22px;
+    min-height: 46px;
+    font-size: 14.5px;
+  }
+}

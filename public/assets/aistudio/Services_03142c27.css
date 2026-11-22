@@ -1,0 +1,663 @@
+
+/* ======================================
+   SHEZINO SERVICES PAGE
+====================================== */
+
+.sz-services {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow: hidden;
+  color: #0a1a42;
+  background: #fff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.sz-services,
+.sz-services * {
+  box-sizing: border-box;
+}
+
+.sz-services img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Hide the generic footer only on this page */
+body:has(.sz-services) .footer,
+body:has(.sz-services) .site-footer {
+  display: none !important;
+}
+
+/* Main background */
+
+.sz-services-hero {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    120deg,
+    #fff 0%,
+    #fbfcff 65%,
+    #f2f5ff 100%
+  );
+}
+
+/* CSS wave: no external asset or checkerboard */
+
+.sz-services-wave {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 300px;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgba(110, 135, 255, .24),
+      transparent 66%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 37%,
+      rgba(169, 195, 255, .42) 72%,
+      rgba(234, 240, 255, .4)
+    );
+  clip-path: ellipse(95% 82% at 100% 0%);
+}
+
+/* Main two-column layout */
+
+.sz-services-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 245px;
+  align-items: start;
+  gap: 34px;
+  width: 100%;
+  max-width: 1180px;
+  min-height: 570px;
+  margin: 0 auto;
+  padding: 38px 6% 28px;
+}
+
+.sz-services-copy {
+  min-width: 0;
+}
+
+.sz-services-eyebrow {
+  display: block;
+  margin: 0 0 9px;
+  color: #3565c8;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sz-services-copy h1 {
+  max-width: 100%;
+  margin: 0;
+  color: #091a42;
+  font-size: clamp(27px, 2.9vw, 37px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.15;
+}
+
+.sz-services-copy h1 span {
+  background: linear-gradient(100deg, #0878fa, #6639ed);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.sz-services-description {
+  max-width: 445px;
+  margin: 12px 0 9px;
+  color: #455571;
+  font-size: 10px;
+  line-height: 1.75;
+}
+
+.sz-services-rule {
+  display: block;
+  width: 23px;
+  height: 1px;
+  margin: 11px 0 17px;
+  background: #4975d2;
+}
+
+/* Service list */
+
+.sz-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  width: 100%;
+  max-width: 510px;
+}
+
+.sz-service-item {
+  display: grid;
+  grid-template-columns: 23px minmax(0, 1fr);
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+}
+
+.sz-service-number {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #edf2ff;
+  color: #17305e;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.sz-service-text h2 {
+  margin: 2px 0 4px;
+  color: #0b1b40;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.sz-service-text p {
+  margin: 0;
+  color: #53627b;
+  font-size: 8px;
+  line-height: 1.6;
+}
+
+/* Right-side message */
+
+.sz-services-aside {
+  position: relative;
+  min-width: 0;
+  min-height: 490px;
+}
+
+.sz-services-slogan {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 65px 0 0;
+  padding-left: 12px;
+  border-left: 1px solid #8da5d0;
+  color: #263755;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.sz-services-slogan i {
+  display: block;
+  width: 19px;
+  height: 1px;
+  margin-top: 8px;
+  background: #5277c5;
+}
+
+/* Office image */
+
+.sz-services-office {
+  position: absolute;
+  top: 165px;
+  right: 0;
+  width: 100%;
+  height: 325px;
+  overflow: hidden;
+  background: #e9f1fc;
+}
+
+.sz-services-office img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Soft fade, limited to the top edge */
+
+.sz-services-office::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 35px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    #f8faff,
+    rgba(248, 250, 255, .4),
+    transparent
+  );
+}
+
+/* Bottom CTA */
+
+.sz-services-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
+  margin: 0;
+  padding: 22px 7%;
+  overflow: hidden;
+  color: #fff;
+  background: #061638;
+}
+
+.sz-services-cta-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 30% 120%,
+      rgba(35, 45, 255, .8),
+      transparent 49%
+    ),
+    linear-gradient(
+      110deg,
+      #061638 0%,
+      #071a51 65%,
+      #2724b8 100%
+    );
+}
+
+.sz-services-cta-art::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(120deg, #0829dc, #4527df);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 55% 100%);
+}
+
+.sz-services-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.sz-services-cta-content h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.sz-services-cta-line {
+  display: block;
+  width: 23px;
+  height: 1px;
+  margin: 9px 0;
+  background: #afc8ff;
+}
+
+.sz-services-cta-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  font-size: 9px;
+  text-decoration: none;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+  .sz-services-layout {
+    grid-template-columns: minmax(0, 1fr) 190px;
+    gap: 20px;
+    padding: 32px 5% 25px;
+  }
+
+  .sz-services-copy h1 {
+    font-size: 27px;
+  }
+
+  .sz-services-list {
+    gap: 13px;
+  }
+
+  .sz-services-aside {
+    min-height: 450px;
+  }
+
+  .sz-services-office {
+    top: 165px;
+    height: 280px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .sz-services-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    min-height: 0;
+    padding: 28px 6% 24px;
+  }
+
+  .sz-services-copy h1 {
+    font-size: clamp(26px, 7vw, 35px);
+    letter-spacing: -.9px;
+  }
+
+  .sz-services-description {
+    font-size: 10px;
+  }
+
+  .sz-services-list {
+    gap: 15px;
+  }
+
+  .sz-services-aside {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 185px;
+  }
+
+  .sz-services-slogan {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 10px;
+  }
+
+  .sz-services-office {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 185px;
+  }
+
+  .sz-services-cta {
+    min-height: 115px;
+    padding: 20px 6%;
+  }
+
+  .sz-services-cta-content h2 {
+    font-size: 14px;
+  }
+}
+
+/* FINAL OFFICE IMAGE SIZE AND POSITION FIX */
+
+.sz-services-layout {
+  grid-template-columns: minmax(0, 1fr) 290px !important;
+  gap: 28px !important;
+  max-width: 1280px;
+  min-height: 600px;
+  padding-right: 5% !important;
+}
+
+.sz-services-aside {
+  position: relative;
+  min-height: 540px !important;
+  overflow: visible;
+}
+
+.sz-services-slogan {
+  margin-top: 55px !important;
+}
+
+.sz-services-office {
+  position: absolute !important;
+  top: 130px !important;
+  right: -8px !important;
+  width: 290px !important;
+  height: 405px !important;
+  overflow: hidden;
+  background: transparent !important;
+}
+
+.sz-services-office img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+  background: transparent !important;
+}
+
+@media (max-width: 800px) {
+  .sz-services-layout {
+    grid-template-columns: minmax(0, 1fr) 220px !important;
+  }
+
+  .sz-services-office {
+    width: 220px !important;
+    height: 330px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .sz-services-layout {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .sz-services-aside {
+    display: grid !important;
+    grid-template-columns: 0.8fr 1.2fr !important;
+    min-height: 220px !important;
+    width: 100%;
+  }
+
+  .sz-services-office {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    height: 220px !important;
+  }
+}
+
+/* Final office image positioning fix */
+
+.sz-services-aside {
+  position: relative !important;
+  min-width: 0;
+  min-height: 460px !important;
+  background: transparent !important;
+}
+
+.sz-services-office {
+  position: absolute !important;
+  top: 115px !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 340px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.sz-services-office img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center top !important;
+  background: transparent !important;
+}
+
+.sz-services-office::before,
+.sz-services-office::after {
+  content: none !important;
+}
+
+@media (max-width: 560px) {
+  .sz-services-aside {
+    min-height: 210px !important;
+  }
+
+  .sz-services-office {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    height: 210px !important;
+  }
+}
+
+/* Final responsive width and alignment correction */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.sz-services {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: clip;
+}
+
+.sz-services-hero {
+  width: 100%;
+  max-width: 100%;
+  overflow: clip;
+}
+
+.sz-services-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 240px) !important;
+  align-items: start;
+  gap: clamp(18px, 3vw, 32px) !important;
+  width: 100%;
+  max-width: 1180px;
+  min-width: 0;
+  margin: 0 auto !important;
+  padding: 35px clamp(20px, 5vw, 65px) 28px !important;
+}
+
+.sz-services-copy,
+.sz-services-aside {
+  min-width: 0;
+  width: 100%;
+}
+
+.sz-services-copy h1 {
+  overflow-wrap: normal;
+  font-size: clamp(25px, 3vw, 36px) !important;
+  line-height: 1.15 !important;
+}
+
+.sz-services-description {
+  max-width: 100%;
+}
+
+.sz-services-office {
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 240px;
+}
+
+.sz-services-office img {
+  width: 100% !important;
+  max-width: 100%;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+}
+
+/* Smaller desktop and tablet widths */
+
+@media (max-width: 760px) {
+  .sz-services-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(140px, 190px) !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+
+  .sz-services-office {
+    max-width: 190px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .sz-services-layout {
+    display: flex !important;
+    flex-direction: column;
+    padding: 28px 6% 24px !important;
+  }
+
+  .sz-services-aside {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 14px;
+    min-height: 210px !important;
+  }
+
+  .sz-services-office {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    max-width: none;
+    height: 210px !important;
+  }
+}
+
+/* ZOOM THE OFFICE IMAGE */
+
+.sz-services-office {
+  width: 100% !important;
+  height: 405px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+.sz-services-office img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center bottom !important;
+
+  transform: scale(1.4);
+  transform-origin: center bottom;
+}
+
+/* Mobile adjustment */
+@media (max-width: 560px) {
+  .sz-services-office {
+    height: 250px !important;
+  }
+
+  .sz-services-office img {
+    transform: scale(1.2);
+  }
+}
+/* Move service list slightly downward */
+.sz-services-list {
+  margin-top: 12px !important;
+}

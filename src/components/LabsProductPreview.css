@@ -1,0 +1,746 @@
+.lpp-stage {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 16px 16px 0;
+  font-family: var(--sz-font-body);
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+.lpp-stage-connect {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(2, 157, 250, 0.28), transparent 55%),
+    linear-gradient(145deg, #071330 0%, #0a2258 100%);
+}
+
+.lpp-stage-acadex {
+  background:
+    radial-gradient(circle at 80% 15%, rgba(1, 94, 237, 0.16), transparent 55%),
+    linear-gradient(145deg, #dbeafe 0%, #c6dcff 100%);
+}
+
+.lpp-stage-vitalis {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(20, 184, 166, 0.24), transparent 55%),
+    linear-gradient(145deg, #073332 0%, #0b5951 100%);
+}
+
+.lpp-stage-learnix {
+  background:
+    radial-gradient(circle at 80% 15%, rgba(86, 218, 255, 0.22), transparent 55%),
+    linear-gradient(145deg, #0c1738 0%, #050b1d 100%);
+}
+
+/* SHARED BROWSER WINDOW SHELL */
+.lpp-app-window {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  background: #ffffff;
+  border: 1px solid rgba(1, 94, 237, 0.16);
+  border-bottom: 0;
+  box-shadow: 0 -6px 24px rgba(5, 12, 31, 0.2);
+  overflow: hidden;
+}
+
+.lpp-app-window.is-dark {
+  background: #08122b;
+  border-color: rgba(126, 232, 255, 0.22);
+  color: #ffffff;
+}
+
+.lpp-app-chrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  background: #f1f6fd;
+  border-bottom: 1px solid #e1ebf8;
+  flex-shrink: 0;
+}
+
+.lpp-app-chrome.is-dark {
+  background: #050c1f;
+  border-bottom-color: rgba(126, 232, 255, 0.14);
+}
+
+.lpp-mac-dots {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.lpp-mac-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b7cae8;
+}
+
+.lpp-app-chrome.is-dark .lpp-mac-dots span {
+  background: rgba(148, 179, 230, 0.35);
+}
+
+.lpp-app-url {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #485d80;
+  font-size: 9.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lpp-app-url.is-dark {
+  background: rgba(255, 255, 255, 0.06);
+  color: #b7cdec;
+}
+
+.lpp-live-pill {
+  flex-shrink: 0;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(86, 218, 255, 0.14);
+  color: #7ee8ff;
+  font-family: var(--sz-font-display);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.lpp-app-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(126, 232, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  flex-shrink: 0;
+}
+
+.lpp-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-family: var(--sz-font-display);
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.lpp-nav-brand svg {
+  color: #56daff;
+}
+
+.lpp-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #9bb5de;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.lpp-nav-links span.is-on {
+  color: #ffffff;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background: rgba(1, 94, 237, 0.32);
+}
+
+/* =====================================================
+   01. SHEZINO CONNECT — REAL DISPATCH WEB APP
+   ===================================================== */
+.lpp-connect-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.lpp-connect-hero-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: rgba(1, 94, 237, 0.18);
+  border: 1px solid rgba(86, 218, 255, 0.24);
+}
+
+.lpp-connect-hero-bar strong {
+  display: block;
+  color: #ffffff;
+  font-size: 10.2px;
+  font-weight: 700;
+}
+
+.lpp-connect-hero-bar span {
+  color: #b7d2f8;
+  font-size: 8.8px;
+}
+
+.lpp-action-chip {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: linear-gradient(110deg, #015eed 0%, #029dfa 100%);
+  color: #ffffff;
+  font-family: var(--sz-font-display);
+  font-size: 8.8px;
+  font-weight: 700;
+}
+
+.lpp-connect-feed {
+  display: grid;
+  gap: 6px;
+  flex: 1;
+}
+
+.lpp-feed-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(140, 184, 255, 0.14);
+}
+
+.lpp-feed-item.is-featured {
+  background: rgba(2, 157, 250, 0.12);
+  border-color: rgba(86, 218, 255, 0.34);
+}
+
+.lpp-feed-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.lpp-avatar-badge {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: rgba(86, 218, 255, 0.16);
+  color: #56daff;
+  flex-shrink: 0;
+}
+
+.lpp-avatar-badge.is-blue {
+  background: rgba(1, 94, 237, 0.25);
+  color: #8ab4ff;
+}
+
+.lpp-avatar-badge.is-green {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}
+
+.lpp-feed-left strong {
+  display: block;
+  color: #ffffff;
+  font-size: 9.8px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.lpp-feed-left span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: #9cb8e3;
+  font-size: 8.4px;
+}
+
+.lpp-status-tag {
+  flex-shrink: 0;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-family: var(--sz-font-display);
+  font-size: 8.4px;
+  font-weight: 700;
+}
+
+.lpp-status-tag.is-matched {
+  background: rgba(86, 218, 255, 0.18);
+  color: #7ee8ff;
+}
+
+.lpp-status-tag.is-active {
+  background: rgba(1, 94, 237, 0.28);
+  color: #a8cbff;
+}
+
+.lpp-status-tag.is-done {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}
+
+/* =====================================================
+   02. SHEZINO ACADEX — REAL CAMPUS ERP PORTAL
+   ===================================================== */
+.lpp-campus-shell {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  flex: 1;
+  min-height: 0;
+}
+
+.lpp-campus-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 8px;
+  background: #0a1b47;
+  color: #c2d4f2;
+}
+
+.lpp-campus-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-family: var(--sz-font-display);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.lpp-campus-logo svg {
+  color: #56daff;
+}
+
+.lpp-rail-pill {
+  padding: 5px 7px;
+  border-radius: 5px;
+  font-size: 9.2px;
+  font-weight: 600;
+}
+
+.lpp-rail-pill.is-on {
+  background: #015eed;
+  color: #ffffff;
+}
+
+.lpp-campus-canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #ffffff;
+}
+
+.lpp-acadex-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.lpp-acadex-topbar strong {
+  display: block;
+  color: #050c1f;
+  font-family: var(--sz-font-display);
+  font-size: 10.8px;
+  font-weight: 800;
+}
+
+.lpp-acadex-topbar span {
+  display: block;
+  color: #5b7196;
+  font-size: 8.6px;
+}
+
+.lpp-acadex-live {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #eaf3ff;
+  color: #015eed !important;
+  font-weight: 700;
+}
+
+.lpp-campus-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.lpp-stat-card {
+  padding: 6px 8px;
+  border-radius: 7px;
+  background: #f5f9ff;
+  border: 1px solid #e1ecfa;
+}
+
+.lpp-stat-card span {
+  display: block;
+  color: #5d7090;
+  font-size: 8.2px;
+  font-weight: 600;
+}
+
+.lpp-stat-card strong {
+  color: #050c1f;
+  font-family: var(--sz-font-display);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.lpp-acadex-table {
+  display: grid;
+  gap: 5px;
+}
+
+.lpp-table-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: #f8fbff;
+  border: 1px solid #e3edf9;
+  font-size: 9.2px;
+  color: #1f3354;
+  font-weight: 600;
+}
+
+.lpp-table-row strong {
+  font-size: 8.8px;
+  font-weight: 700;
+}
+
+.lpp-table-row strong.is-ok {
+  color: #059669;
+}
+
+.lpp-table-row strong.is-sync {
+  color: #015eed;
+}
+
+/* =====================================================
+   03. SHEZINO VITALIS — REAL CLINICAL PORTAL
+   ===================================================== */
+.lpp-vitalis-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 10px 12px;
+  color: #0f172a;
+}
+
+.lpp-tablet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 7px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e2f2ee;
+}
+
+.lpp-clinical-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0f766e;
+  font-family: var(--sz-font-display);
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.lpp-patient-token {
+  color: #0f766e;
+  font-family: var(--sz-font-display);
+  font-size: 9.5px;
+  font-weight: 800;
+}
+
+.lpp-clinical-grid {
+  display: grid;
+  grid-template-columns: 1.32fr 1fr;
+  gap: 9px;
+  flex: 1;
+  min-height: 0;
+}
+
+.lpp-vitals-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+}
+
+.lpp-ecg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.lpp-ecg-header strong {
+  display: block;
+  color: #0f172a;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.lpp-ecg-header span {
+  display: block;
+  color: #0f766e;
+  font-size: 8.6px;
+  font-weight: 600;
+}
+
+.lpp-ecg-icon {
+  color: #0d9488;
+  flex-shrink: 0;
+}
+
+.lpp-ecg-svg {
+  width: 100%;
+  height: 24px;
+}
+
+.lpp-clinical-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.lpp-clinical-metrics > div {
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #d5f5ef;
+}
+
+.lpp-clinical-metrics span {
+  display: block;
+  color: #527572;
+  font-size: 7.8px;
+}
+
+.lpp-clinical-metrics strong {
+  color: #0f172a;
+  font-family: var(--sz-font-display);
+  font-size: 9.5px;
+  font-weight: 800;
+}
+
+.lpp-triage-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+
+.lpp-triage-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.lpp-triage-step.is-done {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.lpp-triage-step.is-active {
+  background: #0d9488;
+  color: #ffffff;
+}
+
+/* =====================================================
+   04. SHEZINO LEARNIX — REAL LEARNING & CONTEST PORTAL
+   ===================================================== */
+.lpp-learnix-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.lpp-learnix-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: rgba(1, 94, 237, 0.2);
+  border: 1px solid rgba(86, 218, 255, 0.3);
+}
+
+.lpp-banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #7ee8ff;
+  font-family: var(--sz-font-display);
+  font-size: 8.2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.lpp-learnix-banner strong {
+  display: block;
+  color: #ffffff;
+  font-size: 10.2px;
+  font-weight: 700;
+}
+
+.lpp-xp-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(86, 218, 255, 0.16);
+  color: #7ee8ff;
+  font-family: var(--sz-font-display);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.lpp-learnix-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.15fr;
+  gap: 8px;
+  flex: 1;
+}
+
+.lpp-learnix-tracks {
+  display: grid;
+  gap: 6px;
+}
+
+.lpp-track-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 8px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(140, 184, 255, 0.16);
+  color: #56daff;
+}
+
+.lpp-track-pill.is-highlight {
+  background: rgba(2, 157, 250, 0.16);
+  border-color: rgba(86, 218, 255, 0.34);
+}
+
+.lpp-track-pill strong {
+  display: block;
+  color: #ffffff;
+  font-size: 9.4px;
+  font-weight: 700;
+}
+
+.lpp-track-pill span {
+  display: block;
+  color: #9cb8e3;
+  font-size: 8.2px;
+}
+
+.lpp-learnix-board {
+  display: grid;
+  gap: 5px;
+}
+
+.lpp-lb-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(140, 184, 255, 0.14);
+}
+
+.lpp-lb-row.is-top {
+  background: rgba(2, 157, 250, 0.16);
+  border-color: rgba(86, 218, 255, 0.34);
+}
+
+.lpp-lb-rank {
+  color: #56daff;
+  font-family: var(--sz-font-display);
+  font-size: 9.2px;
+  font-weight: 800;
+}
+
+.lpp-lb-row strong {
+  color: #ffffff;
+  font-size: 9.6px;
+  font-weight: 700;
+}
+
+.lpp-lb-reward {
+  color: #7ee8ff;
+  font-size: 8.8px;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .lpp-stage {
+    padding: 12px 10px 0;
+    height: auto;
+    min-height: 265px;
+  }
+
+  .lpp-app-window {
+    height: auto;
+    min-height: 253px;
+  }
+
+  .lpp-campus-shell,
+  .lpp-clinical-grid,
+  .lpp-learnix-split {
+    grid-template-columns: 1fr;
+  }
+
+  .lpp-campus-rail,
+  .lpp-nav-links {
+    display: none;
+  }
+}
